@@ -1,0 +1,26 @@
+﻿/ Brayan López Mercado
+/ Organización y Arquitectura De Computadoras
+/ Fecha: 22 de Febrero de 2023
+/ Practica 2: Introducción a MARIE
+Input
+Store x
+Input
+Store y
+Jns forLoop
+Load num
+Output
+Halt
+forLoop, Hex 000
+loop,	Load num
+    Add x
+    Store num
+    Load y
+    Subt one
+    Store y
+    Skipcond 400
+    Jump loop
+    JumpI forLoop
+num, DEC 0
+x, DEC 0
+y, DEC 0
+one, DEC 1

@@ -1,0 +1,26 @@
+﻿/ Brayan López Mercado
+/ Organización y Arquitectura De Computadoras
+/ Fecha: 22 de Febrero de 2023
+/ Practica 2: Introducción a MARIE
+Input
+Store size
+JnS capturarArreglo
+Halt
+capturarArreglo, Hex 000
+captura, Clear 
+	Load size
+    Input
+    StoreI pos
+    Load pos
+    Add one
+	Store pos
+    Load size
+    subt one
+    Store size
+    Skipcond 400
+    Jump captura
+    JumpI capturarArreglo
+size, DEC 0
+pos, HEX 300
+one, HEX 1
+oneD,DEC 1

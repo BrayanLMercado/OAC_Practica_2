@@ -1,0 +1,31 @@
+﻿/ Brayan López Mercado
+/ Organización y Arquitectura De Computadoras
+/ Fecha: 17 de Febrero de 2023
+/ Practica 2: Introducción a MARIE
+Input
+Store t
+Input
+Store y
+/ Si y es negativo se suman los números (se le cambia el signo a y)
+/ Si y es positivo se restan los números
+Skipcond 000 /if y<0
+Jns Sumar   /else
+Jns Restar /then
+/Se le agrega 2 al resultado para luego mostarlo en la terminal
+Add incremento
+Output
+Halt
+
+Sumar, Hex 000
+	Load t
+    Add y
+    JumpI Sumar
+
+Restar, Hex 000
+	Load t
+    Subt y
+    JumpI Restar
+
+t, DEC 0
+y, DEC 0
+incremento, Dec 2
